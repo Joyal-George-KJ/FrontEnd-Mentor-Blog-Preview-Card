@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'figtree';
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--Yellow);
+}
+
+.card-container {
+    gap: 7rem;
+    margin: 2rem min(0.2rem, 1rem, 2rem);
+    display: grid;
+    justify-items: center;
+}
+
+.card {
+    padding: 2rem;
+    cursor: default;
+    max-width: 24rem;
+    min-width: 20rem;
+    border-radius: 2rem;
+    box-shadow: 12px 12px 0 var(--Black);
+
+    color: var(--Black);
+    background-color: var(--White);
+    outline: 2px solid var(--Black);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner {
+    width: 100%;
+    margin: 0 0 2rem 0;
+}
+
+.banner img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.tags > p {
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    color: var(--Black);
+    background-color: var(--Yellow);
+}
+
+p.time-of-publish {
+    font-style: 1.2rem;
+    font-weight: 600;
+}
+
+p.title {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+p.title:hover, p.title:focus {
+    cursor: pointer;
+    color: var(--Yellow);
+}
+
+p.description {
+    color: var(--Grey);
+}
+
+
+.posted-by {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.posted-by img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.posted-by p.name {
+    margin: 0 1rem;
+    font-weight: 800;
+}
+
+.attribution {
+    padding: 2rem;
+    font-size: 11px;
+    cursor: default;
+    margin: 1rem 0 0 0;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px black;
+    background-color: var(--White);
+    
+    bottom: 10%;
+    position: absolute;
+    
+    z-index: 2;
+    animation: popNout 22s 1s 1;
+    transform: translateX(-110%);
+}
+.attribution a {
+    color: black;
+    cursor: pointer;
+    font-weight: 500;
+    text-shadow: 0 0 5px hsl(50, 100%, 72%);
+    text-decoration-color: #969696;
+}
+
+@keyframes popNout {
+        to {
+        transition: ease;
+        transform: translateX(10%);
+    }
+}
